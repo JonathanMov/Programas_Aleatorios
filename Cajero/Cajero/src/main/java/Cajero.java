@@ -39,10 +39,15 @@ public class Cajero {
         
         return acomodar(retiro);
     }
+    public void rellenar(int b1000, int b500,int b200,int b100){
+        this.saldo_disponible+=((b1000*1000)+(b500*500)+(b200*200)+(b100*100));
+        int cant[]={b1000,b500,b200,b100};
+        for(int i=0;i<=3;i++)this.billetes.set(i,new Monto(denom[i],billetes.get(i).getCantidad()+cant[i]));
+    }
     public void getDinero(){
         System.out.println("Hay "+ this.saldo_disponible+" pesos en el cajero.");
         for(Monto d:billetes){
-            System.out.println("Distribuidos en "+d.getCantidad()+" billets de "+d.getDenominacion());
+            System.out.println("Distribuidos en "+d.getCantidad()+" billetes de "+d.getDenominacion());
         }
     }
 }
@@ -60,5 +65,8 @@ class Monto{
     }
     public int getCantidad(){
         return cantidad;
+    }
+    public void aumCant(int aumento){
+        this.cantidad+=aumento;
     }
 }
