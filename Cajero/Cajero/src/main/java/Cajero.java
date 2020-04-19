@@ -1,5 +1,11 @@
 import java.util.ArrayList;
-
+/*Por hacer
+*Implementar interfaz
+*Poder reacomodar la cantidad solicitada, ejemplo si no hay billetes de 200 poder dar de 100
+*Actualizar saldo disponible con datos de los array's (denom y billetes)
+*Poder transferir a otro cliente
+*Recordar especificar si el que deposita es cliente o no para dar valor al parametro booleano
+*/
 public class Cajero {
     private int saldo_disponible;
     private ArrayList<Monto> billetes= new ArrayList<>(4);
@@ -79,18 +85,22 @@ public class Cajero {
         }
         return null;
     }
-    /*Método para depositar dinero al cajero, ya sea porque el cliente realizó un deposito o porque 
-    el encargado del cajero lo rellenó. Se llama al método para actualizar los fondos del cliente,
-    se actualiza el saldo actual del cajero y se declara un array donde se guardan la cantidad de
-    cada billete depositado.*/
-    public void deposito(int b1000, int b500,int b200,int b100){
+    /*Método para depositar dinero al cajero,por medio del cliente. Se llama al método para actualizar 
+    los fondos del cliente, se actualiza el saldo actual del cajero y se declara un array donde se 
+    guardan la cantidad de cada billete depositado.*/
+    public void deposito(int b1000, int b500,int b200,int b100,boolean a){
         int depositado=(b1000*1000)+(b500*500)+(b200*200)+(b100*100);
-        cliente.depositar(depositado);
+        if(a=true)cliente.depositar(depositado);
         this.saldo_disponible+=depositado;
         int cant[]={b1000,b500,b200,b100};
         /*Mediante un ciclo donde se aumenta la cantidad de billetes de un tipo pasando como parametro
         la cantidad de billetes introducidos en el array*/
         for(int i=0;i<=3;i++)this.billetes.get(i).aumCant(cant[i]);
+    }
+    /*Sobrecarga de metodo, no es necesario especificar si es cliente o no. Usado principalmente
+    cuando se rellene el cajero*/
+    public void deposito(int b1000, int b500,int b200,int b100){
+        deposito(b1000,b500,b200,b100,false);
     }
     /*Método para comprobar la cantidad de saldo disponible y como están acomodados los billetes.
     PD: No eliminar, método de comprobacion de errores*/
