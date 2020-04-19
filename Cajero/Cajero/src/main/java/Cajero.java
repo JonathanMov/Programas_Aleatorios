@@ -33,6 +33,7 @@ public class Cajero {
         for(int i=0;i<billetes.size();i++){
             this.billetes.set(i,new Monto(denom[i],repartir_dinero(saldo,denom[i])));
             saldo-=billetes.get(i).getDenominacion()*billetes.get(i).getCantidad();
+            
         }
     }
     /*Método para saber la cantidad de billetes posibles de una denominacion en funcion de la cantidad 
@@ -57,9 +58,7 @@ public class Cajero {
     public ArrayList<Monto> retirar(int retiro){
         /*Condicion para saber si el cliente y el cajero tiene suficientes fondos para realizar
         el retiro, se incluye otra condicional para saber si hay suficientes billetes para realizar
-        el retiro,se llama al método para que se le descuente el retiro a la cuenta
-        del cliente, se disminuye la cantidad de dinero que tiene el cajero y se llama
-        al método para*/
+        el retiro.*/
         if((cliente.getSaldo()>=retiro)&&(this.saldo_disponible>=retiro)){
             cliente.retirar(retiro);
         
@@ -69,7 +68,9 @@ public class Cajero {
                     return null;
                 }
             }
-            
+            /*Luego se actualiza la cantidad de billetes en el cajero con el metodo acomodar
+            como parametro del metodo de disminuir cantidad y se actualiza la cantidad de
+            saldo disponible en el cajero*/
             for(int i=0;i<=3;i++){
                 billetes.get(i).disCant(acomodar(retiro).get(i).getCantidad());
             }
@@ -78,13 +79,21 @@ public class Cajero {
         }
         return null;
     }
+    /*Método para depositar dinero al cajero, ya sea porque el cliente realizó un deposito o porque 
+    el encargado del cajero lo rellenó. Se llama al método para actualizar los fondos del cliente,
+    se actualiza el saldo actual del cajero y se declara un array donde se guardan la cantidad de
+    cada billete depositado.*/
     public void deposito(int b1000, int b500,int b200,int b100){
         int depositado=(b1000*1000)+(b500*500)+(b200*200)+(b100*100);
         cliente.depositar(depositado);
         this.saldo_disponible+=depositado;
         int cant[]={b1000,b500,b200,b100};
-        for(int i=0;i<=3;i++)this.billetes.set(i,new Monto(denom[i],billetes.get(i).getCantidad()+cant[i]));
+        /*Mediante un ciclo donde se aumenta la cantidad de billetes de un tipo pasando como parametro
+        la cantidad de billetes introducidos en el array*/
+        for(int i=0;i<=3;i++)this.billetes.get(i).aumCant(cant[i]);
     }
+    /*Método para comprobar la cantidad de saldo disponible y como están acomodados los billetes.
+    PD: No eliminar, método de comprobacion de errores*/
     public void getDinero(){
         System.out.println("Hay "+ this.saldo_disponible+" pesos en el cajero.");
         for(Monto d:billetes){
@@ -92,15 +101,18 @@ public class Cajero {
         }
     }
 }
-
+/*Clase monto donde se almacena la informacion de fajos de billetes, su denominacion y la cantidad
+que hay de cada uno*/
 class Monto{
     private int denominacion;
     private int cantidad;
+    /*Sobrecarga de constructores, en el que tiene parametros se inicializan los atributpos*/
     public Monto(){}
     public Monto(int denominacion,int cantidad){
         this.denominacion=denominacion;
         this.cantidad=cantidad;
     }
+    /*Métodos para obtner atributos y aumentar/disminuir la cantidad de ellos*/
     public int getDenominacion(){
         return denominacion;
     }
