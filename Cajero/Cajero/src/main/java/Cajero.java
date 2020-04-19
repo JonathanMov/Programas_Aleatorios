@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 /*Por hacer
-*Implementar interfaz
-*Poder reacomodar la cantidad solicitada, ejemplo si no hay billetes de 200 poder dar de 100
+*Implementar interfaz(Recordar especificar si el que deposita es cliente o no para dar valor al parametro booleano)
 *Actualizar saldo disponible con datos de los array's (denom y billetes)
+*Poder reacomodar la cantidad solicitada, ejemplo si no hay billetes de 200 poder dar de 100
 *Poder transferir a otro cliente
-*Recordar especificar si el que deposita es cliente o no para dar valor al parametro booleano
 */
 public class Cajero {
     private int saldo_disponible;
