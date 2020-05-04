@@ -1,16 +1,22 @@
-
-
-/**
- *
- * @author jonathan
- */
 public class Rellenar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Rellenar
-     */
     public Rellenar() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        txtB1000.setText("");
+        txtB500.setText("");
+        txtB200.setText("");
+        txtB100.setText("");
+        lb1000.setText("No. billetes 1000");
+        lb500.setText("No. billetes 500");
+        lb200.setText("No. billetes 200");
+        lb100.setText("No. billetes 100");
+        txtB1000.setHorizontalAlignment(0);
+        txtB500.setHorizontalAlignment(0);
+        txtB200.setHorizontalAlignment(0);
+        txtB100.setHorizontalAlignment(0);
+        btnRelleno.setText("Rellenar");
+        new Movimientos().actualiza();
     }
 
     /**
@@ -22,25 +28,114 @@ public class Rellenar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtB1000 = new javax.swing.JTextField();
+        txtB500 = new javax.swing.JTextField();
+        txtB200 = new javax.swing.JTextField();
+        txtB100 = new javax.swing.JTextField();
+        btnRelleno = new javax.swing.JButton();
+        lb1000 = new javax.swing.JLabel();
+        lb500 = new javax.swing.JLabel();
+        lb200 = new javax.swing.JLabel();
+        lb100 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        txtB1000.setText("jTextField1");
+
+        txtB500.setText("jTextField2");
+
+        txtB200.setText("jTextField3");
+
+        txtB100.setText("jTextField4");
+
+        btnRelleno.setText("jButton1");
+        btnRelleno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRellenoActionPerformed(evt);
+            }
+        });
+
+        lb1000.setText("jLabel1");
+
+        lb500.setText("jLabel2");
+
+        lb200.setText("jLabel3");
+
+        lb100.setText("jLabel4");
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb1000)
+                    .addComponent(txtB1000))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtB500, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                    .addComponent(lb500))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtB200, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(lb200))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb100)
+                    .addComponent(txtB100, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(btnRelleno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(104, 104, 104))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb1000)
+                    .addComponent(lb500)
+                    .addComponent(lb200)
+                    .addComponent(lb100))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtB1000, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtB500, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtB200, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtB100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRelleno)
+                    .addComponent(jButton1))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnRellenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRellenoActionPerformed
+        Movimientos.bi1000(Integer.parseInt(txtB1000.getText()));
+        Movimientos.bi500(Integer.parseInt(txtB500.getText()));
+        Movimientos.bi200(Integer.parseInt(txtB200.getText()));
+        Movimientos.bi100(Integer.parseInt(txtB100.getText()));
+    }//GEN-LAST:event_btnRellenoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Login().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -74,5 +169,15 @@ public class Rellenar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRelleno;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lb100;
+    private javax.swing.JLabel lb1000;
+    private javax.swing.JLabel lb200;
+    private javax.swing.JLabel lb500;
+    private javax.swing.JTextField txtB100;
+    private javax.swing.JTextField txtB1000;
+    private javax.swing.JTextField txtB200;
+    private javax.swing.JTextField txtB500;
     // End of variables declaration//GEN-END:variables
 }

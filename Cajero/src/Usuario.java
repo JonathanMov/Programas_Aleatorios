@@ -1,9 +1,9 @@
 public class Usuario {
-    private String nombre;
+    private int NIP;
     private int saldo;
     public Usuario(){}
-    public Usuario(String nombre,int saldo){
-        this.nombre=nombre;
+    public Usuario(int NIP,int saldo){
+        this.NIP=NIP;
         this.saldo=saldo;
     }
     public void retirar(int retirado){
