@@ -1,0 +1,13 @@
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.AssemblyInfoInputs.cache
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.AssemblyInfo.cs
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.exe
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.deps.json
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.runtimeconfig.json
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.runtimeconfig.dev.json
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.dll
+C:\Users\Jonathan Mojica\Desktop\Bytes\bin\Debug\netcoreapp3.1\Bytes.pdb
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.dll
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.pdb
+C:\Users\Jonathan Mojica\Desktop\Bytes\obj\Debug\netcoreapp3.1\Bytes.genruntimeconfig.cache

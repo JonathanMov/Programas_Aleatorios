@@ -1,0 +1,13 @@
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\bin\Debug\Restaurante.exe
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\bin\Debug\Restaurante.pdb
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.exe
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.pdb
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Inicio.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Inicio_Sesion.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Menu.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Ordenar.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Restaurante\obj\Debug\Restaurante.Menu_admin.resources

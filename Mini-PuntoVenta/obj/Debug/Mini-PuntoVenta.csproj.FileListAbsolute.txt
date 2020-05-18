@@ -1,0 +1,10 @@
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\bin\Debug\Mini-PuntoVenta.exe.config
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\bin\Debug\Mini-PuntoVenta.exe
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\bin\Debug\Mini-PuntoVenta.pdb
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini-PuntoVenta.csprojAssemblyReference.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini_PuntoVenta.Properties.Resources.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini_PuntoVenta.recursos.resources
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini-PuntoVenta.csproj.GenerateResource.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini-PuntoVenta.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini-PuntoVenta.exe
+C:\Users\Jonathan Mojica\Desktop\Programas_Aleatorios\Mini-PuntoVenta\obj\Debug\Mini-PuntoVenta.pdb
