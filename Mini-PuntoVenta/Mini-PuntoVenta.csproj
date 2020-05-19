@@ -55,6 +55,7 @@
     <Compile Include="Elementos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Excepciones.cs" />
     <Compile Include="Funciones.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="RegistroDB.cs" />

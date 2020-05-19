@@ -85,12 +85,8 @@ namespace Mini_PuntoVenta {
             this.cantidad.Size = new Size(105, this.cantidad.Size.Height);
             Controls.Add(this.cantidad);
 
-            foreach (Control caja in Controls)
-                if (caja is TextBox || caja is RichTextBox || caja is Button)
-                    if (caja != this.code)
-                        caja.Enabled = false;
-                    else if (caja is Button)
-                        caja.Enabled = false;
+            /*Desactiva todos los controles excepto las etiquetas y el texBox donde se registra el codigo*/
+            desactivar_Activar(false);
         }
     }
 }

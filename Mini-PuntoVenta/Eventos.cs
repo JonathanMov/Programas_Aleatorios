@@ -4,63 +4,70 @@ using System.Windows.Forms;
 namespace Mini_PuntoVenta {
     partial class Inventario {
         Producto prod_act;
+        /// <summary>
+        /// Evento encargado de añadir un nuevo producto en la base de datos especificada, ademas de comprobar que los textBox no estén vacios.
+        /// </summary>
         void click_Reg(object sender,EventArgs e) {
             try {
-                foreach (Control caja in Controls)
-                    if (caja is TextBox)
-                        if ((caja as TextBox).Text == String.Empty)
-                            throw new Exception();
-                
+                TxtisEmpty(this.Controls as ControlCollection);
+
                 RegistroDB.Agregar(ToString(), "Inventario");
                 MessageBox.Show("Registro exitoso");
-            }
-            catch (Exception) {
-                MessageBox.Show("Rellena todos los campos");
-            }
-            finally {
                 limpiar();
             }
+            /*En caso que algun textBox se encuentre vacio se notica al usuario que debe ingresar datos válidos */
+            catch (TextBoxisEmptyException) {
+                MessageBox.Show(new TextBoxisEmptyException().Message);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
+        /// <summary>
+        /// Evento encargado de actualizar la base de datos al cambiar un elemento dentro de la misma, ademas de comprobar que los textBox no estén vacios.
+        /// </summary>
         void click_Act(object sender, EventArgs e) {
             try {
-                foreach (Control caja in Controls)
-                    if (caja is TextBox&& (caja as TextBox).Text == String.Empty)
-                        throw new Exception();
-
+                TxtisEmpty(this.Controls as ControlCollection);
                 this.prod_act.code = this.code.Text;
                 this.prod_act.product = this.product.Text;
                 this.prod_act.price = Convert.ToDouble(this.price.Text);
                 this.prod_act.cantidad = Convert.ToInt32(this.cantidad.Text);
                 RegistroDB.Actualiza("Inventario");
                 MessageBox.Show("Producto actualizado de manera exitosa");
-            }
-            catch (Exception) {
-                MessageBox.Show("Rellena todos los campos");
-            }
-            finally {
                 limpiar();
             }
+            catch (TextBoxisEmptyException) {
+                MessageBox.Show(new TextBoxisEmptyException().Message);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
+        /// <summary>
+        /// Evento encargado (al presionar enter) de determinar si el codigo ingresado pertence a un articulo, de ser asi actualizar sus datos.
+        /// En caso de que el elemento no exista lo añade a la base de datos.
+        /// </summary>
         void reg_Act(object sender, KeyPressEventArgs e) {
             if (e.KeyChar == (char)Keys.Enter) {
                 desactivar_Activar(true);
 
-                this.prod_act=getProducto(this.code.Text);
-                if (prod_act != null) {
-                    this.code.Enabled = true;
-                    this.cantidad.Enabled = true;
-                    this.price.Enabled = true;
-                    this.product.Text = prod_act.product.Replace("_", " ");
-                    this.description.Text = prod_act.description.Replace("_", " ");
-                    this.cantidad.Text = prod_act.cantidad.ToString().Replace("_", " ");
-                    this.price.Text = prod_act.price.ToString().Replace("_", " ");
+                this.prod_act=GetProducto(this.code.Text);
+                /*
+                 * En caso que coincida el codigo dado en el textbox con algun producto en la DB, despliega su info en las txtBox.
+                 * Además desactiva el boton de registrar para que solo se pueda actualizar el producto. En caso que sea un nuevo
+                 * producto tambien se activan todos los campos menos el boton de actualizar porque se registrará un nuevo elemento.
+                 */
+                if (this.prod_act != null) {
                     this.registrar.Enabled = false;
-                    MessageBox.Show(prod_act.ToString());
+                    this.product.Text = this.prod_act.product.Replace("_", " ");
+                    this.description.Text = this.prod_act.description.Replace("_", " ");
+                    this.cantidad.Text = this.prod_act.cantidad.ToString().Replace("_", " ");
+                    this.price.Text = this.prod_act.price.ToString().Replace("_", " ");
+                    MessageBox.Show(this.prod_act.ToString());
                 }
                 else 
                     this.actualizar.Enabled = false;
-                
-                    
             }
         }
 
