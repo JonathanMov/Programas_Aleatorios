@@ -10,8 +10,8 @@ namespace Mini_PuntoVenta {
         void click_Reg(object sender,EventArgs e) {
             try {
                 TxtisEmpty(this.Controls as ControlCollection);
-
-                RegistroDB.Agregar(ToString(), "Inventario");
+                RegistroDB.productos.Add(new Producto(this.code.Text.Replace(" ", "_"), this.product.Text.Replace(" ", "_"), this.description.Text.Replace(" ", "_"), Convert.ToDouble(this.price.Text), Convert.ToInt32(this.cantidad.Text)));
+                RegistroDB.Actualiza(false);
                 MessageBox.Show("Registro exitoso");
                 limpiar();
             }
@@ -33,7 +33,7 @@ namespace Mini_PuntoVenta {
                 this.prod_act.product = this.product.Text;
                 this.prod_act.price = Convert.ToDouble(this.price.Text);
                 this.prod_act.cantidad = Convert.ToInt32(this.cantidad.Text);
-                RegistroDB.Actualiza("Inventario");
+                RegistroDB.Actualiza(false);
                 MessageBox.Show("Producto actualizado de manera exitosa");
                 limpiar();
             }
@@ -50,6 +50,7 @@ namespace Mini_PuntoVenta {
         /// </summary>
         void reg_Act(object sender, KeyPressEventArgs e) {
             if (e.KeyChar == (char)Keys.Enter) {
+                this.code.Text = this.code.Text.ToUpper();
                 desactivar_Activar(true);
 
                 this.prod_act=GetProducto(this.code.Text);

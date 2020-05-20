@@ -1,9 +1,0 @@
-Code | Product | Description | Price | Cantidad
-GAC-55|Gomitas_Azucaradas|Gomitas_en_forma_de_dona_glaseadas_de_azucar_morena|44.50|35
-GEC-25|Galletas_Emperador|Galleta_rellena_de_chocolate_entre_2_tapas_de_galleta.|14.25|9
-PDR-08|Paleta_de_la_Rosa|Paleta_tipo_lollipop_sabor_fresa|17.45|10
-MCC-20|Cacahuates_salados|Cacahuate_tostado_cubierto_de_sal|10.15|25
-BBM-05|Bombones_Bianchi_Mediano|Malvabisco_de_forma_cilindrica_de_color_rosa_y_blanco._Peso_400_gr.|20.15|75
-BBG-05|Bombones_Bianchi_Grande|Dulce_en_forma_de_donitas_glaseadas_con_azucar.|17.5|35
-PPG-03|Paleta_Payaso|Paleta_cubierta_de_chocolate_con_dulce_de_goma.|9.92|30
-MBB-30|Chocolate_Malvabon|Producto_cubierto_de_chocolate_con_relleno_sabor_fresa.|25|100

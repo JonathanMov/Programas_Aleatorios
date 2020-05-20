@@ -2,10 +2,11 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
+using Mini_PuntoVenta;
 
 /// <summary>
-    /// Configuraciones genericas.
-    /// </summary>
+/// Configuraciones genericas.
+/// </summary>
 public class Funciones {
     /// <summary>
         /// <para> Establece el tamaño de la ventana, y su icono
@@ -29,5 +30,9 @@ public class Funciones {
         Lienzo.StartPosition = FormStartPosition.CenterScreen;
         Lienzo.FormClosed += new FormClosedEventHandler(Cerrar);
     }
-    public static void Cerrar(object sender, EventArgs e) => Application.Exit();
+    public static void Cerrar(object sender, EventArgs e) {
+        RegistroDB.productos = null;
+        RegistroDB.ventas = null;
+        Application.Exit();
+    }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 
 namespace Mini_PuntoVenta {
     /// <summary>
@@ -17,7 +16,7 @@ namespace Mini_PuntoVenta {
         /// <summary>
         /// Obtiene o establece la descripción del producto.
         /// </summary>
-        public string description { get; set; } ="Descripcion No Disponible";
+        public string description { get; set; }
         /// <summary>
         /// Obtiene o establece el precio del producto.
         /// </summary>
@@ -37,19 +36,22 @@ namespace Mini_PuntoVenta {
             set {
                 this._cantidad = value;
             }
-        }/// <summary>
+        }
+        /// <summary>
         /// Crea un producto inicializando todos los atributos menos el de la descripcion.
         /// </summary>
         /// <param name="code">Establece el codigo del producto</param>
         /// <param name="product">Establece el nombre del producto</param>
         /// <param name="price">Establece el precio del producto</param>
         /// <param name="cantidad">Establece la cantidad actual del producto</param>
-        public Producto(string code,string product,double price,int cantidad) {
+        public Producto(string code,string product,string description, double price,int cantidad) {
             this.code = code;
             this.product = product;
+            this.description = description;
             this.price = price;
             this.cantidad = cantidad;
         }
+        public Producto() { }
         public override String ToString() {
             return String.Format("{0}|{1}|{2}|{3}|{4}",this.code,this.product,this.description,this.price,this.cantidad);
         }

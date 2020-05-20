@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Mini_PuntoVenta {
@@ -8,7 +9,7 @@ namespace Mini_PuntoVenta {
         /// </summary>
         public Inventario() {
             Funciones.Diseno(this, 400, 300, "Inventario", "logo_inv");
-            RegistroDB.Leer("Inventario");
+            RegistroDB.Leer(false);
             iniciaComponentes();
         }
         /// <summary>

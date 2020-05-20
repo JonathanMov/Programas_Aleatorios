@@ -1,0 +1,58 @@
+[
+    {
+        "code": "GAC-55",
+        "product": "Gomitas Azucaradas",
+        "description": "Gomitas_en_forma_de_dona_glaseadas_de_azucar_morena",
+        "price": 44.5,
+        "cantidad": 35
+    },
+    {
+        "code": "GEC-25",
+        "product": "Galletas_Emperador",
+        "description": "Galleta_rellena_de_chocolate_entre_2_tapas_de_galleta.",
+        "price": 14.25,
+        "cantidad": 9
+    },
+    {
+        "code": "PDR-08",
+        "product": "Paleta de la Rosa",
+        "description": "Paleta_tipo_lollipop_sabor_fresa",
+        "price": 7.45,
+        "cantidad": 10
+    },
+    {
+        "code": "MCC-20",
+        "product": "Cacahuates_salados",
+        "description": "Cacahuate_tostado_cubierto_de_sal",
+        "price": 10.15,
+        "cantidad": 25
+    },
+    {
+        "code": "BBM-05",
+        "product": "Bombones_Bianchi_Mediano",
+        "description": "Malvabisco_de_forma_cilindrica_de_color_rosa_y_blanco._Peso_400_gr.",
+        "price": 20.15,
+        "cantidad": 75
+    },
+    {
+        "code": "PPG-03",
+        "product": "Paleta_Payaso",
+        "description": "Paleta_cubierta_de_chocolate_con_dulce_de_goma.",
+        "price": 9.92,
+        "cantidad": 30
+    },
+    {
+        "code": "MBB-30",
+        "product": "Chocolate_Malvabon",
+        "description": "Producto_cubierto_de_chocolate_con_relleno_sabor_fresa.",
+        "price": 25,
+        "cantidad": 100
+    },
+    {
+        "code": "BMT-08",
+        "product": "Banderitas_TriColor",
+        "description": "Dulce_tradicional_mexicano_hecho_de_ralladura_de_coco_de_3_colores.",
+        "price": 12.15,
+        "cantidad": 35
+    }
+]
